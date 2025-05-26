@@ -51,7 +51,7 @@ header {
   font-size: 1.5rem;
   cursor: pointer;
   color: var(--text-color);
-  display: none;
+  display: none!important;
 }
 nav {
   display: flex;
@@ -541,7 +541,7 @@ footer {
     padding: 1.5rem;
   }
   .menu-toggle {
-    display: block;
+    display: block!important;
   }
   nav {
     position: fixed;
@@ -566,7 +566,7 @@ footer {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
-    display: none;
+    display: none!important;
     z-index: 1;
   }
   .overlay.active {
