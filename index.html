@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Velas Aromáticas</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+<header>
+    <div class="logo">🌿 Velas Aromáticas</div>
+    <i class="fas fa-bars menu-toggle" onclick="toggleMenu()"></i>
+    <nav id="mainNav">
+      <a href="#inicio"><i class="fas fa-home"></i> Inicio</a>
+      <a href="#beneficios"><i class="fas fa-gift"></i> Beneficios</a>
+      <a href="#productos"><i class="fas fa-box-open"></i> Productos</a>
+      <a href="#contacto"><i class="fas fa-envelope"></i> Contactos</a>
+      <a href="#" id="abrirModal"><i class="fas fa-user user-icon"></i>Usuario</a>
+    </nav>
+  </header>
+  <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
+<!-- Modal Login -->
+<div id="modalLogin" class="modal">
+  <div class="modal-contenido">
+    <span class="cerrar" id="cerrarModal">&times;</span>
+    <h2>Iniciar Sesión</h2>
+   <form class="login">
+      <div class="form-group">
+        <label for="email">Correo Electrónico</label>
+        <input type="email" id="email" name="email" required placeholder="correo@ejemplo.com">
+      </div>
+
+      <div class="form-group">
+        <label for="password">Contraseña</label>
+        <input type="password" id="password" name="password" required placeholder="••••••••">
+      </div>
+
+      <div class="form-actions">
+        <a href="#">¿Olvidaste tu contraseña?</a>
+      </div>
+
+      <button type="submit" class="login-btn">Iniciar Sesión</button>
+
+      <div class="register-link">
+        ¿No tienes una cuenta? <a href="#">Regístrate</a>
+      </div>
+    </form>
+  </div>
+</div>
+  <section id="inicio" class="hero gallery animate">
+  <div class="hero-content">
+    <h1>Relájate con nuestras velas aromáticas</h1>
+    <p>Fragancias únicas para cada momento</p>
+    <button onclick="scrollToSection('productos')">Ver productos</button>
+  </div>
+</section>
+  <section id="beneficios" class="gallery animate">
+    <h2>¿Por qué elegirnos?</h2>
+    <p class="intro-text">Nuestras velas combinan calidad, naturaleza y cuidado artesanal.</p>
+    <div class="feature-cards">
+      <div class="card">
+        <div class="icon">🌱</div>
+        <h3>Ingredientes Naturales</h3>
+        <p>Utilizamos cera vegetal y esencias naturales libres de tóxicos.</p>
+      </div>
+      <div class="card">
+        <div class="icon">🕯️</div>
+        <h3>Hechas a Mano</h3>
+        <p>Cada vela es elaborada con dedicación por artesanos locales.</p>
+      </div>
+      <div class="card">
+        <div class="icon">🌼</div>
+        <h3>Aromas Relajantes</h3>
+        <p>Diseñadas para crear ambientes de paz y bienestar.</p>
+      </div>
+    </div>
+  </section>
+<div class="separador"></div>
+
+<section id="productos" class="gallery fade-right animate">
+  <h2><i class="fa-solid fa-candle-holder"></i> Nuestros Productos</h2>
+  <p class="intro-text">Explora nuestras velas artesanales, cuidadosamente elaboradas con fragancias naturales.</p>
+
+  <div class="carousel-container">
+  <div class="image-grid carousel-track" id="carouselTrack">
+    <div class="image-card">
+      <img src="img/vela-1.jpg" alt="Vela de Lavanda" class="zoomable" />
+      <p><i class="fa-solid fa-spa"></i> Vela de Lavanda</p>
+    </div>
+    <div class="image-card">
+      <img src="img/vela-2.jpg" alt="Vela de Vainilla" class="zoomable" />
+      <p><i class="fa-solid fa-seedling"></i> Vela de Vainilla</p>
+    </div>
+    <div class="image-card">
+      <img src="img/vela-3.jpg" alt="Vela Cítrica" class="zoomable" />
+      <p><i class="fa-solid fa-lemon"></i> Vela Cítrica</p>
+    </div>
+    <div class="image-card">
+      <img src="img/vela-1.jpg" alt="Vela de Canela" class="zoomable" />
+      <p><i class="fa-solid fa-fire-flame-curved"></i> Vela de Canela</p>
+    </div>
+    <div class="image-card">
+      <img src="img/vela-2.jpg" alt="Vela de Coco" class="zoomable" />
+      <p><i class="fa-solid fa-coconut"></i> Vela de Coco</p>
+    </div>
+  </div>
+</div>
+</section>
+
+
+<div class="separador"></div>
+
+  <section id="contacto" class="contact contact-section animate">
+  <div class="contact-container">
+    <!-- Info de contacto -->
+    <div class="contact-info">
+      <h2 style="margin-bottom: 5px;">Contáctanos</h2>
+      <p><strong>📞 Teléfono:</strong> +51 999 888 777</p>
+      <p><strong>📧 Email:</strong> contacto@velasaromaticas.com</p>
+      <p><strong>📍 Dirección:</strong> Av. Fragancia 123, Lima, Perú</p>
+      <p><strong>🕐 Horario:</strong> Lunes a Sábado, 9:00 am - 6:00 pm</p>
+    </div>
+
+    <!-- Formulario -->
+    <div class="contact-form">
+      <div id="formulario-mensaje" class="form-success"></div>
+
+      <form id="formulario-contacto" novalidate>
+        <div class="content-form" >
+        <div class="form-group">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required />
+          <span class="error" id="error-nombre"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="correo">Correo electrónico</label>
+          <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com" required />
+          <span class="error" id="error-correo"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" rows="4" placeholder="¿En qué podemos ayudarte?" required></textarea>
+          <span class="error" id="error-mensaje"></span>
+        </div>
+
+        <button type="submit">Enviar mensaje</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+
+  <footer>
+    <p>&copy; 2025 Velas Aromáticas. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    function scrollToSection(id) {
+      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    }
+
+    const reveals = document.querySelectorAll(".reveal");
+
+    function mostrarSecciones() {
+      for (let i = 0; i < reveals.length; i++) {
+        const windowHeight = window.innerHeight;
+        const elementTop = reveals[i].getBoundingClientRect().top;
+        const elementVisible = 100;
+
+        if (elementTop < windowHeight - elementVisible) {
+          reveals[i].classList.add("active");
+        }
+      }
+    }
+
+    window.addEventListener("scroll", mostrarSecciones);
+    window.addEventListener("load", mostrarSecciones);
+  </script>
+
+  <script>
+  document.getElementById("formulario-contacto").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      let esValido = true;
+
+      document.querySelectorAll(".error").forEach(el => el.textContent = "");
+      document.querySelectorAll("input, textarea").forEach(el => el.classList.remove("invalid"));
+
+      const nombre = document.getElementById("nombre");
+      if (nombre.value.trim().length < 2) {
+        document.getElementById("error-nombre").textContent = "Por favor, ingresa un nombre válido.";
+        nombre.classList.add("invalid");
+        esValido = false;
+      }
+
+      const correo = document.getElementById("correo");
+      const correoRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!correoRegex.test(correo.value.trim())) {
+        document.getElementById("error-correo").textContent = "Ingresa un correo electrónico válido.";
+        correo.classList.add("invalid");
+        esValido = false;
+      }
+
+      const mensaje = document.getElementById("mensaje");
+      if (mensaje.value.trim().length < 10) {
+        document.getElementById("error-mensaje").textContent = "Tu mensaje debe tener al menos 10 caracteres.";
+        mensaje.classList.add("invalid");
+        esValido = false;
+      }
+
+      if (esValido) {
+        const mensajeExito = document.getElementById("formulario-mensaje");
+        mensajeExito.textContent = "¡Formulario enviado correctamente!";
+        mensajeExito.style.display = "block";
+        this.reset();
+
+        setTimeout(() => {
+          mensajeExito.style.display = "none";
+        }, 4000);
+      }
+    });
+</script>
+<script src="script.js"></script>
+</body>
+</html>
