@@ -16,7 +16,11 @@ const modal = document.getElementById('modalLogin');
 
 abrir.addEventListener('click', (e) => {
   e.preventDefault();
+  const nav = document.getElementById("mainNav");
+  const overlay = document.getElementById("overlay");
   modal.classList.add('mostrar');
+  nav.classList.toggle("active");
+  overlay.classList.toggle("active");
 });
 
 cerrar.addEventListener('click', () => {

@@ -80,10 +80,11 @@ section {
 }
 
 /* Modal */
+/* MODAL GENERAL */
 .modal {
   position: fixed;
   inset: 0;
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0, 0, 0, 0.6);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -98,16 +99,19 @@ section {
   visibility: visible;
 }
 
+/* CONTENIDO DEL MODAL */
 .modal-contenido {
-  background-color: #fff;
-  padding: 2rem;
+  background-color: #ffffff;
+  padding: 2.5rem;
   max-width: 400px;
   width: 90%;
-  border-radius: 10px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
   position: relative;
-  transform: translateY(-30px);
+  transform: translateY(-20px);
   opacity: 0;
   transition: transform 0.3s ease, opacity 0.3s ease;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .modal.mostrar .modal-contenido {
@@ -115,21 +119,114 @@ section {
   opacity: 1;
 }
 
+/* BOTÓN CERRAR */
 .cerrar {
   position: absolute;
-  top: 10px;
-  right: 15px;
+  top: 15px;
+  right: 20px;
   font-size: 1.5rem;
+  color: #888;
   cursor: pointer;
+  transition: color 0.3s;
+}
+.cerrar:hover {
+  color: #e74c3c;
 }
 
+/* TITULO */
+.modal-contenido h2 {
+  margin-bottom: 1.5rem;
+  font-size: 1.6rem;
+  color: #333;
+  text-align: center;
+}
+
+/* FORMULARIO */
+.login .form-group {
+  margin-bottom: 1.2rem;
+}
+
+.login label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #555;
+  font-weight: 500;
+}
+
+.login input[type="email"],
+.login input[type="password"] {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.login input:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+  outline: none;
+}
+
+/* ACCIONES ADICIONALES */
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
+}
+
+.form-actions a {
+  font-size: 0.9rem;
+  color: #8fc496;
+  text-decoration: none;
+}
+
+.form-actions a:hover {
+  text-decoration: underline;
+}
+
+/* BOTÓN DE LOGIN */
+.login-btn {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #8fc496;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login-btn:hover {
+  background-color: #d6e5d8;
+}
+
+/* ENLACE REGISTRARSE */
+.register-link {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+.register-link a {
+  color: #8fc496;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+}
 
 /* Hero */
 .hero {
   background-image: url('img/fondo.jpg'); /* puedes cambiar esta URL */
   background-size: cover;
   background-position: center;
-  height: 90vh;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
